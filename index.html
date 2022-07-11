@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Coding Challenge</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+        }
+
+        .logo {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(213, 43, 43, 0.932);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: xx-large;
+        }
+
+        nav {
+            position: relative;
+            top: -750px;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: left;
+        }
+
+        ul {
+            margin-top: 20px;
+            margin-left: 20px;
+            width: 80%;
+            display: flex;
+            justify-content: left;
+        }
+
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: gray;
+        }
+
+        a:hover {
+            color: rgb(243, 18, 100);
+        }
+
+        .banner {
+            height: 80vh;
+            width: 100%;
+            position: relative;
+        }
+
+        footer {
+            position: relative;
+            top: -250px;
+            height: 100px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #btn {
+            width: 150px;
+            position: fixed;
+            top: 10px;
+            right: 0px;
+            color: red;
+            padding: 10px;
+            box-shadow: 1px 1px 3px gray;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: x-large;
+        }
+
+        #dis {
+            position: absolute;
+            top: 400px;
+            left: 170px;
+            padding: 2px 20px;
+        }
+
+        p {
+            color: rgb(54, 54, 78);
+            position: relative;
+            bottom: 280px;
+            left: 80px;
+            border: 40px;
+            width: 600px;
+            font-size: 70px;
+            display: flex;
+            font-weight: bold;
+        }
+
+        img {
+            position: relative;
+            left: +780px;
+        }
+
+        button {
+            position: relative;
+            right: +630px;
+            top: -300px;
+            background-color: rgb(255, 248, 248);
+            height: 40px;
+            width: 250px;
+            color: grey;
+            border-color: rgb(219, 202, 202);
+        }
+
+        .Offer {
+            color: rgb(243, 18, 100);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="temp.png" width="700 pixels" height="500 pixels">
+    <button>
+        <span class="Offer">70% Off </span>
+        for first 3 months
+    </button>
+    <p>
+        Digital Agency with Excellence Services.
+    </p>
+    <nav id="nav">
+        <div class="logo">R</div>
+        <ul>
+            <li><a href="#home"> Home</a></li>
+            <li><a href="#">Project</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Elements</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <a href="#">
+        <div id="btn">Buy Rogan--->&nbsp; <i class="fa-solid fa-arrow-right-long"></i></div>
+    </a>
+    <footer>
+        <h1 id="name"></h1>
+        <h1 id="uro"></h1>
+        <h1 id="col"></h1>
+        <h1 id="date"></h1>
+    </footer>
+    <script>
+        document.getElementById("name").textContent = "Shivani Singh";
+        document.getElementById("uro").textContent = "201500660";
+        document.getElementById("col").textContent = "GLA University, Mathura";
+        window.onload = date;
+        function date() {
+            var d = new Date().toLocaleDateString();
+            var l = d.split("/");
+            var day = l[1], month = l[0], year = l[2];
+            if (day.length < 2) day = "0" + day;
+            if (month.length < 2) month = "0" + month;
+            var date = day + "-" + month + "-" + year;
+            document.getElementById("date").textContent = `${date}`;
+        }
+    </script>
+
+</body>
+
+</html>
